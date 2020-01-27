@@ -13,3 +13,6 @@ By Belinda Okumu
 * Open my Github account.
 * Git clone my repository.
 * Send a pull request.
+
+## Contributing
+Pull requests are welcome.
