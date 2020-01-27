@@ -8,3 +8,8 @@ By Belinda Okumu
 
 ## Technology used
 *Python
+
+## Set up instractions
+* Open my Github account.
+* Git clone my repository.
+* Send a pull request.
