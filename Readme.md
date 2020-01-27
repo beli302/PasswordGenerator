@@ -5,3 +5,6 @@ This is an application that helps the user to manage there passwords and even ge
 
 ## Authors information
 By Belinda Okumu
+
+## Technology used
+*Python
