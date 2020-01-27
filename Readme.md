@@ -16,3 +16,7 @@ By Belinda Okumu
 
 ## Contributing
 Pull requests are welcome.
+
+## Contacts
+* Tel: +254706313301
+* Email: belindashirkiz@gmail.com
