@@ -11,6 +11,7 @@ By Belinda Okumu
 
 ## Set up instractions
 * Open my Github account.
+* Fork the repository.
 * Git clone my repository.
 * Send a pull request.
 
