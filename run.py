@@ -48,6 +48,7 @@ def main():
             user_name = input()
 
             print(f"Hello {user_name} Welcome to password generator.")
+            print("Please sign in to generate your password.")
             print('\n')
 
             while True:
