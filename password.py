@@ -1,36 +1,48 @@
 import pyperclip
 
 class Credentials:
- """
-Class that generates new instances of Password
- """
+    """
+    Class that generates new instances of Password
+    """    
 
-credentials_list = [] 
+    credentials_list = [] 
+    password_list = []
 
-def __init__(self,first_name,last_name,password,email):
+    def __init__(self,first_name,last_name,password,email):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.password = password
+        self.email = email 
 
-
- self.first_name = first_name
- self.last_name = last_name 
-
- password_list = []
  
-def save_password(self):
-
+ 
+    def save_credentials(self):
         '''
-        save_password method saves password objects into password_list
+        save_credentials method saves password objects into password_list
         '''
 
         Credentials.password_list.append(self)
 
-@classmethod
-def display_passwords(cls):
+    # def save_password(self):
+
+    #     Credentials.password_list.append(self)
+        
+    def delete_password(self):
+
+        '''
+        delete_password method deletes a saved password from the password_list
+        '''
+
+        Credentials.password_list.remove(self)
+
+    @classmethod
+    def display_passwords(cls):
         '''
         method that returns the password list
         '''
         return cls.password_list
 
-        def test_copy_email(self):
+    def test_copy_email(self):
         '''
         Test to confirm that we are copying the email address from a found password
         '''
@@ -40,7 +52,7 @@ def display_passwords(cls):
 
         self.assertEqual(self.new_password.email,pyperclip.paste())
 
-        @classmethod
-def copy_email(cls,number):
+    @classmethod
+    def copy_email(cls,number):
         password_found = Password.find_by_password
         pyperclip.copy(password_found.email)

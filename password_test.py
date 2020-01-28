@@ -1,18 +1,15 @@
 import unittest 
 from password import Credentials
 class TestCredentials(unittest.TestCase):
-
     '''
     Test class that defines test cases for the password class behaviours.
-
     '''
-
 
     def setUp(self):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_password = Credentials("Belinda","Okumu","belindashirkiz2@gmail.com")
+        self.new_password = Credentials("Belinda","Okumu","748768685","belindashirkiz2@gmail.com")
 
 
     def test__init__(self):
@@ -30,7 +27,7 @@ class TestCredentials(unittest.TestCase):
          the password list
         '''
         self.new_password.save_credentials()
-        self.assertEqual(len(Password.password_list),1)
+        self.assertEqual(len(Credentials.password_list),1)
 
 
     def test_save_multiple_password(self):
@@ -47,36 +44,29 @@ class TestCredentials(unittest.TestCase):
             '''
             this does the clean up after each test has run.
             '''
-            password.password_list = []
+            Credentials.password_list = []
 
     def test_save_multiple_password(self):
             '''
              this test saves multiple_passwords in our password_list
             '''
-            self.new_password.save_password()
-            test_password = Password("Test","","","")
-            test_password.save_password()
-            self.assertEqual(len(Password.password_list),2)
+            self.new_password.save_credentials()
+            test_password = Credentials("Test","","","")
+            test_password.save_credentials()
+            self.assertEqual(len(Credentials.password_list),2)
 
 
     def test_delete_password(self):
             '''
             test_delete_password to test if we can remove a password from our password list
             '''
-            self.new_password.save_password()
-            test_password = Password("Test","","","")
-            test_password.save_password()
+            self.new_password.save_credentials()
+            test_password = Credentials("Test","","","")
+            test_password.save_credentials()
 
             self.new_password.delete_password()
             self.assertEqual(len(Credentials.password_list),1)
 
-    def delete_password(self):
-
-        '''
-        delete_password method deletes a saved password from the password_list
-        '''
-
-        Credentials.password_list.remove(self)
 
     def test_display_all_passwords(self):
         '''
