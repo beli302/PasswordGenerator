@@ -20,10 +20,6 @@ class Credentials:
         '''
 
         Credentials.password_list.append(self)
-
-    # def save_password(self):
-
-    #     Credentials.password_list.append(self)
         
     def delete_password(self):
 

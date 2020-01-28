@@ -1,7 +1,7 @@
 #!/usr/bin/env python3.6
 from password import Credentials
 
-def create_password(fname,lname,password,email):
+def create_password(firstname,lastname,password,email):
     '''
     Function to create a new password
     '''
