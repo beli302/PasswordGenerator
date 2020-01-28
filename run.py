@@ -75,8 +75,7 @@ def main():
 
                             save_credentials(create_credentials(f_name,l_name,p_,e_address))
                             print ('\n')
-                            print(
-                                "New Password for {f_name} {l_name} created \n")
+                            print("New Password for {f_name} {l_name} created \n")
                             print ('\n')
 
                     elif short_code == 'sp':
