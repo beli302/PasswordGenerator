@@ -1,6 +1,4 @@
-import pyperclip
-
-class Credentials:
+cpclass Credentials:
     """
     Class that generates new instances of Password
     """    
