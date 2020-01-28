@@ -1,10 +1,11 @@
 class Credentials:
-    """
-    Class that generates new instances of Password
-    """    
+    class User:
+        """
+      Class that generates new instances of Password
+        """    
 
     credentials_list = [] 
-    password_list = []
+    user_password_list = []
 
     def __init__(self,first_name,last_name,password,email):
         self.first_name = first_name
@@ -16,25 +17,25 @@ class Credentials:
  
     def save_credentials(self):
         '''
-        save_credentials method saves password objects into password_list
+        save_credentials method saves password objects into user_password_list
         '''
 
-        Credentials.password_list.append(self)
+        Credentials.user_password_list.append(self)
         
     def delete_password(self):
 
         '''
-        delete_password method deletes a saved password from the password_list
+        delete_password method deletes a saved password from the user_password_list
         '''
 
-        Credentials.password_list.remove(self)
+        Credentials.user_password_list.remove(self)
 
     @classmethod
     def display_passwords(cls):
         '''
-        method that returns the password list
+        method that returns the user_password_list
         '''
-        return cls.password_list
+        return cls.user_password_list
 
     def test_copy_email(self):
         '''
