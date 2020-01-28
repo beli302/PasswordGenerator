@@ -1,4 +1,3 @@
-#!/usr/bin/env python3.6
 from password import Credentials
 
 def create_password(firstname,lastname,password,email):
@@ -52,7 +51,7 @@ def main():
             print('\n')
 
             while True:
-                    print("Use these short codes : cp - create a new password, sp - show password , fp -find a password, ex -exit the password list ")
+                    print("Select what you want to do  : cp - create a new password, sp - show password , fp -find a password, ex -exit the password list ")
 
                     short_code = input().lower()
 
