@@ -1,53 +1,27 @@
-class Credentials:
-    class User:
-        """
-      Class that generates new instances of Password
-        """    
-
-    credentials_list = [] 
-    user_password_list = []
-
-    def __init__(self,first_name,last_name,password,email):
-        self.first_name = first_name
-        self.last_name = last_name
-        self.password = password
-        self.email = email 
-
- 
- 
-    def save_credentials(self):
+class Credential:
+    '''
+    class that generates new instaces of credentials information
+    '''
+    credential_list = []  # credential list
+    def save_credential(self):
         '''
-        save_credentials method saves password objects into user_password_list
+        save_credential method saves object in credential list
         '''
-
-        Credentials.user_password_list.append(self)
-        
-    def delete_password(self):
-
-        '''
-        delete_password method deletes a saved password from the user_password_list
-        '''
-
-        Credentials.user_password_list.remove(self)
-
+        Credential.credential_list.append(self)
+    def __init__(self, social_media, passkey):
+        self.social_media = social_media
+        self.passkey = passkey
     @classmethod
-    def display_passwords(cls):
+    def display_credentials(cls):
         '''
-        method that returns the user_password_list
+        method that returns credentials of a user
         '''
-        return cls.user_password_list
-
-    def test_copy_email(self):
-        '''
-        Test to confirm that we are copying the email address from a found password
-        '''
-
-        self.new_password.save_password()
-        Password.copy_email("")
-
-        self.assertEqual(self.new_password.email,pyperclip.paste())
-
+        return cls.credential_list
     @classmethod
-    def copy_email(cls,number):
-        password_found = Password.find_by_password
-        pyperclip.copy(password_found.email)
+    def delete_credential(cls, account):
+        '''
+        delete a credential
+        '''
+        for credential in cls.credential_list:
+            if credential.social_media == account:
+                return credential
